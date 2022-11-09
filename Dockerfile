@@ -3,7 +3,7 @@ WORKDIR /app
 COPY . .
 
 # dependencies
-RUN npm ci 
+RUN npm install
 RUN npm run build
 
 FROM nginx:1.21.0-alpine as production
